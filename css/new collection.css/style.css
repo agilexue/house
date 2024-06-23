@@ -1,0 +1,326 @@
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Правило для все элементов*/
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+/* Стили */
+a{
+    color: inherit;
+}
+
+/* Заголовки */              
+.page-info-title,
+.collection-title,
+.team-title{    /* h2 */ 
+    font-size: 40px;   
+    font-weight: 500;
+    line-height: 110%;
+}
+
+.card-info-title{ /* h3 */                     
+    font-size: 30px; 
+    font-weight: 500;
+    line-height: 35px;
+}
+/* Кнопка */
+.bn-collection{
+    padding: 20px 60px;
+    background-color: #EEDB6D;
+    color: #2C2D35;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 23px;
+}
+
+/* Ul Kid */
+.bn-collection:hover{
+    background-color: #FAEB97;
+}
+
+.bn-collection:active{
+    background-color: #D9B949;
+}
+
+.bn-collection:focus{
+    border: 1px solid #A38314
+}
+
+/* Автолаяют */
+.autolayout{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    flex-shrink: 0;
+}
+
+main{
+    flex: 1;
+}
+
+footer{
+    flex-shrink: 1;
+}
+
+/* Общие стили для тела сайта */
+body{
+    padding-top: 101px;
+    font-family: "Raleway", sans-serif;
+    color: #2C2D35;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+/* Контейнер */
+.container{
+    max-width:1140px ;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+/* Раздел header */
+.header{
+    padding:33px 0px ;
+    background-color: #E1EDE6 ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; 
+}
+
+/* Бургер меню */
+.header-burger{
+    display: none;
+    position: relative;
+    width: 35px;
+    height: 35px;
+}
+
+.header-burger span{
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #376B44;
+    left: 2px;
+
+}
+
+.header-burger span:nth-last-child(1){
+    transform: translateY(-10px);
+}
+
+.header-burger span:nth-last-child(3){
+    transform: translateY(10px);
+}
+
+/* Скролл стили */
+.header_scroll{
+    padding: 10px 0px;
+    transition: .3s;
+    background-color: rgba(225, 237, 230, .7);
+    box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.5);
+}
+
+.header-content,
+.logo-content,
+.menu-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-content{
+    gap: 8px;
+}
+
+.logo-content:hover{
+    transition: .3s;
+    transform: scale(1.1);
+}
+
+.logo-title{
+    color: #598D66;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+}
+
+.menu-list{
+    gap: 60px;
+}
+
+.menu-link{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 23px;  
+}
+
+.menu-link:hover{
+    transition:.3s ;
+    color: #598D66;
+}
+
+.menu-link:active{
+    color: #376B44;
+}
+
+.menu-link:focus{
+   color:#2C2D35;
+   background-color: #D4E8D9;
+}
+
+/* Секция page-collection */
+.page-collection{
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 0px 70px;
+    color: #fff;
+}
+
+.collection-title-block{
+    max-width: 520px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.collection-text{
+    max-width: 540px;
+    margin-bottom: 60px;
+}
+
+/* Секция page-info */
+.page-info{
+    padding: 70px 0px 0px;
+}
+
+.section-title{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.page-info-content{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.card-info-item{
+     max-width: 540px;
+    background-color: #E1EDE6;
+    padding: 20px 20px 30px;
+    
+}
+
+.card-info-item:hover{
+    transform: scale(1.02);
+    transition: .5s;
+}
+
+.card-img{
+    width: 500px;
+    height: 500px;
+}
+
+.card-info-after{
+    color: #86928B;
+    margin: 20px 0px 7px;
+}
+
+.page-info-title{
+    margin-bottom: 30px;
+}
+
+.page-info-text{
+    max-width: 540px;
+}
+
+/* Секция page-team */
+.page-team{
+    padding: 40px 0px 80px;
+   }
+   
+   .page-team-content{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+   
+   .team-img-block{
+       display: flex;
+       justify-content: flex-start;
+       align-items: center;
+       gap: 30px;
+   }
+   
+   .team-text{
+       max-width: 635px;
+       margin: 20px 0px ;
+   }
+
+    /* Секция footer */
+    .footer{
+        background-color: #E1EDE6 ;
+        padding: 23px 0px 19px; 
+    }
+
+    .footer-content{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .logo-footer-content{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        margin-bottom: 35px;
+    }
+
+    .tel-link{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 23px;
+    }
+
+    .tel-name,
+    .footer-menu-link{
+        color: #86928B;
+    }
+
+    .footer-menu{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 60px;
+    }
+
+    .social-list{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        margin-bottom: 10px;
+    }
+
+    .social-title,
+    .social-text{
+        color: #86928B;
+        font-size: 12px;
+        font-weight: 500;
+    }
