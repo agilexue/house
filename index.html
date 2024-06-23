@@ -1,769 +1,519 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Стиль -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css/style.css">
-    <link rel="stylesheet" href="css/main.css/media.css">
-    <!-- Шрифты -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
-    <!-- JS -->
-    <script defer src="js/main.js"></script>
-    <!-- Иконка -->
-    <link rel="icon" href="img/logo/logo.svg">
-    <!-- Название -->
-    <title>Diploma Project House</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Стиль -->
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/main.css/style.css" />
+		<link rel="stylesheet" href="css/main.css/media.css" />
+		<!-- Шрифты -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet" />
+		<!-- JS -->
+		<script defer src="js/main.js"></script>
+		<!-- Иконка -->
+		<link rel="icon" href="img/logo/logo.svg" />
+		<!-- Название -->
+		<title>Diploma Project House</title>
+	</head>
+	<body>
+		<div class="autolayout">
+			<header id="header" class="header" class="header_scroll">
+				<div class="container">
+					<div class="header-content">
+						<a href="#" class="logo-content" onClick="refreshPage()">
+							<img src="img/logo/logo.svg" alt="" />
+							<p class="logo-title">Ink. House</p>
+						</a>
+						<button class="header-burger"><span></span><span></span><span></span></button>
+						<nav class="menu">
+							<ul class="menu-list">
+								<li class="menu-item">
+									<a href="#reproductions" class="menu-link"> Репродукции </a>
+								</li>
+								<li class="menu-item">
+									<a href="#news" class="menu-link"> Новинки </a>
+								</li>
+								<li class="menu-item">
+									<a href="#team" class="menu-link"> О нас </a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link">
+										<img src="img/icon/buy.png" onclick="openModal()" />
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="modal" id="modal">
+							<div class="modal-content">
+								<span class="close" onclick="closeModal()">&times;</span>
+								<h3 class="modal-title">Корзина</h3>
+								<div class="modal-block">
+									<img class="modal-img" src="img/card/1.1.jpeg" alt="" />
+									<div class="modal-card-text-content">
+										<p>Марсель Руссо</p>
+										<h3 class="modal-card-title">Охота Амура</h3>
+										<p class="modal-card-text">Холст, масло (50х80)</p>
+									</div>
+									<div class="counter">
+										<button class="plus_minus" id="decrease">-</button>
+										<span class="quantity" id="quantity">1</span>
+										<button class="plus_minus" id="increase">+</button>
+									</div>
+									<h4>Стоимость: 14 500</h4>
+									<h4>Итог: <span id="total">14 500 </span></h4>
+								</div>
 
-</head>
-<body>
- <div class="autolayout">
-    <header id="header" class="header" class="header_scroll">
-        <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo-content" onClick="refreshPage()">
-                    <img src="img/logo/logo.svg" alt="">
-                        <p class="logo-title">
-                            Ink. House
-                        </p> 
-                </a>
-                <button class="header-burger">
-                    <span></span><span></span><span></span>
-                </button>
-                <nav class="menu">
-                    <ul class="menu-list">
-                        <li class="menu-item">
-                            <a href="#reproductions" class="menu-link">
-                                Репродукции
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#news" class="menu-link">
-                                Новинки
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#team" class="menu-link">
-                                О нас
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#" class="menu-link">
-                                <img src="img/icon/buy.png" onclick="openModal()">
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="modal" id="modal">
-                    <div class="modal-content">
-                      <span class="close" onclick="closeModal()">&times;</span>
-                      <h3 class="modal-title">Корзина</h3>
-                      <div class="modal-block">
-                          <img class="modal-img" src="img/card/1.1.jpeg" alt="">
-                          <div class="modal-card-text-content">
-                            <p>
-                                Марсель Руссо
-                            </p>
-                              <h3 class="modal-card-title">
-                                  Охота Амура
-                              </h3>
-                              <p class="modal-card-text">
-                                  Холст, масло (50х80) 
-                              </p>
-                          </div>
-                          <div class="counter">
-                            <button class="plus_minus" id="decrease">-</button>
-                            <span class="quantity" id="quantity">1</span>
-                            <button class="plus_minus" id="increase">+</button>
-                          </div>
-                          <h4>Стоимость: 14 500 </h4>
-                          <h4>Итог: <span id="total">14 500 </span></h4>
-                      </div>
-                      
-                      <div class="modal-block">
-                        <img class="modal-img" src="img/card/2.jpeg" alt="">
-                        <div class="modal-card-text-content">
-                          <p>
-                            Анри Селин
-                          </p>
-                            <h3 class="modal-card-title">
-                                Дама с собачкой
-                            </h3>
-                            <p class="modal-card-text">
-                                Холст, масло (50х80) 
-                            </p>
-                        </div>
-                        <div class="counter">
-                          <button class="plus_minus" id="decrease">-</button>
-                          <span class="quantity" id="quantity">1</span>
-                          <button class="plus_minus" id="increase">+</button>
-                        </div>
-                        <h4>Стоимость: 16 500 </h4>
-                        <h4>Итог: <span id="total">16 500</span></h4>
-                    </div>
+								<div class="modal-block">
+									<img class="modal-img" src="img/card/2.jpeg" alt="" />
+									<div class="modal-card-text-content">
+										<p>Анри Селин</p>
+										<h3 class="modal-card-title">Дама с собачкой</h3>
+										<p class="modal-card-text">Холст, масло (50х80)</p>
+									</div>
+									<div class="counter">
+										<button class="plus_minus" id="decrease">-</button>
+										<span class="quantity" id="quantity">1</span>
+										<button class="plus_minus" id="increase">+</button>
+									</div>
+									<h4>Стоимость: 16 500</h4>
+									<h4>Итог: <span id="total">16 500</span></h4>
+								</div>
 
-                    <div class="modal-block">
-                        <img class="modal-img" src="img/card/3.jpeg" alt="">
-                        <div class="modal-card-text-content">
-                          <p>
-                            Франсуа Дюпон
-                          </p>
-                            <h3 class="modal-card-title">
-                                Процедура
-                            </h3>
-                            <p class="modal-card-text">
-                                Цветная литография (40х60) 
-                            </p>
-                        </div>
-                        <div class="counter">
-                          <button class="plus_minus" id="decrease">-</button>
-                          <span class="quantity" id="quantity">1</span>
-                          <button class="plus_minus" id="increase">+</button>
-                        </div>
-                        <h4>Стоимость: 20 000 </h4>
-                        <h4>Итог: <span id="total">20 000</span></h4>
-                    </div>
+								<div class="modal-block">
+									<img class="modal-img" src="img/card/3.jpeg" alt="" />
+									<div class="modal-card-text-content">
+										<p>Франсуа Дюпон</p>
+										<h3 class="modal-card-title">Процедура</h3>
+										<p class="modal-card-text">Цветная литография (40х60)</p>
+									</div>
+									<div class="counter">
+										<button class="plus_minus" id="decrease">-</button>
+										<span class="quantity" id="quantity">1</span>
+										<button class="plus_minus" id="increase">+</button>
+									</div>
+									<h4>Стоимость: 20 000</h4>
+									<h4>Итог: <span id="total">20 000</span></h4>
+								</div>
 
-                    <div class="modal-block">
-                        <img class="modal-img" src="img/card/4.jpeg" alt="">
-                        <div class="modal-card-text-content">
-                          <p>
-                            Луи Детуш
-                          </p>
-                            <h3 class="modal-card-title">
-                                Роза
-                            </h3>
-                            <p class="modal-card-text">
-                                Бумага, акрил (50х80)
-                            </p>
-                        </div>
-                        <div class="counter">
-                          <button class="plus_minus" id="decrease">-</button>
-                          <span class="quantity" id="quantity">1</span>
-                          <button class="plus_minus" id="increase">+</button>
-                        </div>
-                        <h4>Стоимость: 12 000</h4>
-                        <h4>Итог: <span id="total">12 000</span></h4>
-                    </div>
+								<div class="modal-block">
+									<img class="modal-img" src="img/card/4.jpeg" alt="" />
+									<div class="modal-card-text-content">
+										<p>Луи Детуш</p>
+										<h3 class="modal-card-title">Роза</h3>
+										<p class="modal-card-text">Бумага, акрил (50х80)</p>
+									</div>
+									<div class="counter">
+										<button class="plus_minus" id="decrease">-</button>
+										<span class="quantity" id="quantity">1</span>
+										<button class="plus_minus" id="increase">+</button>
+									</div>
+									<h4>Стоимость: 12 000</h4>
+									<h4>Итог: <span id="total">12 000</span></h4>
+								</div>
 
-                    <div class="modal-block">
-                        <img class="modal-img" src="img/card/5.jpeg" alt="">
-                        <div class="modal-card-text-content">
-                          <p>
-                            Франсуа Дюпон
-                          </p>
-                            <h3 class="modal-card-title">
-                                Птичья трапеза
-                            </h3>
-                            <p class="modal-card-text">
-                                Цветная литография (40х60) 
-                            </p>
-                        </div>
-                        <div class="counter">
-                          <button class="plus_minus" id="decrease">-</button>
-                          <span class="quantity" id="quantity">1</span>
-                          <button class="plus_minus" id="increase">+</button>
-                        </div>
-                        <h4>Стоимость: 22 500</h4>
-                        <h4>Итог: <span id="total">22 500</span></h4>
-                    </div>
+								<div class="modal-block">
+									<img class="modal-img" src="img/card/5.jpeg" alt="" />
+									<div class="modal-card-text-content">
+										<p>Франсуа Дюпон</p>
+										<h3 class="modal-card-title">Птичья трапеза</h3>
+										<p class="modal-card-text">Цветная литография (40х60)</p>
+									</div>
+									<div class="counter">
+										<button class="plus_minus" id="decrease">-</button>
+										<span class="quantity" id="quantity">1</span>
+										<button class="plus_minus" id="increase">+</button>
+									</div>
+									<h4>Стоимость: 22 500</h4>
+									<h4>Итог: <span id="total">22 500</span></h4>
+								</div>
 
-                    <div class="modal-block">
-                        <img class="modal-img" src="img/card/6.jpeg" alt="">
-                        <div class="modal-card-text-content">
-                          <p>
-                            Пьер Моранж
-                          </p>
-                            <h3 class="modal-card-title">
-                                Пейзаж с рыбой
-                            </h3>
-                            <p class="modal-card-text">
-                                Цветная литография (40х60) 
-                            </p>
-                        </div>
-                        <div class="counter">
-                          <button class="plus_minus" id="decrease">-</button>
-                          <span class="quantity" id="quantity">1</span>
-                          <button class="plus_minus" id="increase">+</button>
-                        </div>
-                        <h4>Стоимость: 20 000</h4>
-                        <h4>Итог: <span id="total">20 000</span></h4>
-                    </div>
+								<div class="modal-block">
+									<img class="modal-img" src="img/card/6.jpeg" alt="" />
+									<div class="modal-card-text-content">
+										<p>Пьер Моранж</p>
+										<h3 class="modal-card-title">Пейзаж с рыбой</h3>
+										<p class="modal-card-text">Цветная литография (40х60)</p>
+									</div>
+									<div class="counter">
+										<button class="plus_minus" id="decrease">-</button>
+										<span class="quantity" id="quantity">1</span>
+										<button class="plus_minus" id="increase">+</button>
+									</div>
+									<h4>Стоимость: 20 000</h4>
+									<h4>Итог: <span id="total">20 000</span></h4>
+								</div>
 
-                      <!-- <button class="bn-main">
+								<!-- <button class="bn-main">
                         <a href="#reproductions" class="bn-main-link">
                             Заказать
                         </a>
                     </button> -->
-                    </div>
-                  </div>
-            </div>
-        </div>
-    </header>
-    <main class="main">
-        <section class="page-main">
-            <div class="container">
-                <div class="page-main-content">
-                    <div class="page-main-left">
-                        <img src="img/main/1.png" alt="">
-                    </div>
-                    <div class="page-main-right">
-                        <span class="main-title">Реплики картин от </span>
-                        <span class="main-title_color">Ink. House</span>
-                        <p class="main-text">
-                            Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные цены.
-                        </p>
-                        <button class="bn-main">
-                            <a href="#reproductions" class="bn-main-link">
-                                Продукция 
-                            </a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="reproductions" class="page-card">
-            <div class="container">
-                <div class="page-card-content">
-                    <div class="card-nav">
-                        <h2 class="card-nav-title">
-                            Репродукции
-                        </h2>
-                        <div class="card-nav-block">
-                        <button class="bn-nav_active" onclick="toggleBlock('france')">
-                                Франция
-                        </button>
-                        <button class="bn-nav" onclick="toggleBlock('germay')">
-                                Германия 
-                        </button>
-                        <button class="bn-nav" onclick="toggleBlock('england')">
-                                Англия
-                        </button>
-                        </div>
-                    </div>
-                        <nav id="france" class="block">
-                            <ul class="card-list">
-                            <li class="card-item">
-                                <img src="img/card/1.jpeg" id="fullscreenImage" alt="">
-                                <p class="card-after">
-                                    Марсель Руссо
-                                </p>
-                                <h3 class="card-title">
-                                    Охота Амура
-                                </h3>
-                                <p class="card-text">
-                                    Холст, масло (50х80) 
-                                </p>
-                                <h5 class="buy">
-                                    14 500 руб
-                                </h5>
-                                <button class="bn-main">
-                                    <a href="#" class="bn-main-link">
-                                        В корзину 
-                                    </a>
-                                </button>
-                            </li>
-                            <li class="card-item">
-                                <img src="img/card/2.jpeg" id="fullscreenImage" alt="">
-                                <p class="card-after">
-                                    Анри Селин
-                                </p>
-                                <h3 class="card-title">
-                                    Дама с собачкой
-                                </h3>
-                                <p class="card-text">
-                                    Хакрил, бумага (50х80)  
-                                </p>
-                                <h5 class="buy">
-                                    16 500 руб
-                                </h5>
-                                <button class="bn-main">
-                                    <a href="#" class="bn-main-link">
-                                        В корзину 
-                                    </a>
-                                </button>
-                                <li class="card-item">
-                                    <img src="img/card/3.jpeg" id="fullscreenImage" alt="">
-                                    <p class="card-after">
-                                        Франсуа Дюпон
-                                    </p>
-                                    <h3 class="card-title">
-                                        Процедура
-                                    </h3>
-                                    <p class="card-text">
-                                        Цветная литография (40х60) 
-                                    </p>
-                                    <h5 class="buy">
-                                        20 000 руб
-                                    </h5>
-                                    <button class="bn-main">
-                                        <a href="#" class="bn-main-link">
-                                            В корзину  
-                                        </a>
-                                    </button>
-                         </ul>
-                         <ul class="card-list">
-                            <li class="card-item">
-                                <img src="img/card/4.jpeg" id="fullscreenImage" alt="">
-                                <p class="card-after">
-                                    Луи Детуш
-                                </p>
-                                <h3 class="card-title">
-                                    Роза
-                                </h3>
-                                <p class="card-text">
-                                    Бумага, акрил (50х80) 
-                                </p>
-                                <h5 class="buy">
-                                    12 000 руб
-                                </h5>
-                                <button class="bn-main">
-                                    <a href="#" class="bn-main-link">
-                                        В корзину 
-                                    </a>
-                                </button>
-                            </li>
-                            <li class="card-item">
-                                <img src="img/card/5.jpeg" id="fullscreenImage" alt="">
-                                <p class="card-after">
-                                    Франсуа Дюпон
-                                </p>
-                                <h3 class="card-title">
-                                    Птичья трапеза
-                                </h3>
-                                <p class="card-text">
-                                    Цветная литография (40х60)  
-                                </p>
-                                <h5 class="buy">
-                                    22 500 руб
-                                </h5>
-                                <button class="bn-main">
-                                    <a href="#" class="bn-main-link">
-                                        В корзину 
-                                    </a>
-                                </button>
-                                <li class="card-item">
-                                    <img src="img/card/6.jpeg" id="fullscreenImage" alt="">
-                                    <p class="card-after">
-                                        Пьер Моранж
-                                    </p>
-                                    <h3 class="card-title">
-                                        Пейзаж с рыбой
-                                    </h3>
-                                    <p class="card-text">
-                                        Цветная литография (40х60) 
-                                    </p>
-                                    <h5 class="buy">
-                                        20 000 руб
-                                    </h5>
-                                    <button class="bn-main">
-                                        <a href="#" class="bn-main-link">
-                                            В корзину  
-                                        </a>
-                                    </button>
-                         </ul> 
-                        </nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+				<section class="page-main">
+					<div class="container">
+						<div class="page-main-content">
+							<div class="page-main-left">
+								<img src="img/main/1.png" alt="" />
+							</div>
+							<div class="page-main-right">
+								<span class="main-title">Реплики картин от </span>
+								<span class="main-title_color">Ink. House</span>
+								<p class="main-text">
+									Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные цены.
+								</p>
+								<button class="bn-main">
+									<a href="#reproductions" class="bn-main-link"> Продукция </a>
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="reproductions" class="page-card">
+					<div class="container">
+						<div class="page-card-content">
+							<div class="card-nav">
+								<h2 class="card-nav-title">Репродукции</h2>
+								<div class="card-nav-block">
+									<button class="bn-nav_active" onclick="toggleBlock('france')">Франция</button>
+									<button class="bn-nav" onclick="toggleBlock('germay')">Германия</button>
+									<button class="bn-nav" onclick="toggleBlock('england')">Англия</button>
+								</div>
+							</div>
+							<nav id="france" class="block">
+								<ul class="card-list">
+									<li class="card-item">
+										<img src="img/card/1.jpeg" id="fullscreenImage" alt="" />
+										<p class="card-after">Марсель Руссо</p>
+										<h3 class="card-title">Охота Амура</h3>
+										<p class="card-text">Холст, масло (50х80)</p>
+										<h5 class="buy">14 500 руб</h5>
+										<button class="bn-main">
+											<a href="#" class="bn-main-link"> В корзину </a>
+										</button>
+									</li>
+									<li class="card-item">
+										<img src="img/card/2.jpeg" id="fullscreenImage" alt="" />
+										<p class="card-after">Анри Селин</p>
+										<h3 class="card-title">Дама с собачкой</h3>
+										<p class="card-text">Хакрил, бумага (50х80)</p>
+										<h5 class="buy">16 500 руб</h5>
+										<button class="bn-main">
+											<a href="#" class="bn-main-link"> В корзину </a>
+										</button>
+									</li>
 
-                        <nav id="germay" class="block" style="display: none;">
-                            <ul class="card-list">
-                            <li class="card-item">
-                                <img src="img/card/1.1.jpeg" id="fullscreenImage" alt="">
-                                <p class="card-after">
-                                    Курт Вернер
-                                </p>
-                                <h3 class="card-title">
-                                    Над городом
-                                </h3>
-                                <p class="card-text">
-                                    Цветная литография (40х60)  
-                                </p>
-                                <h5 class="buy">
-                                    16 000 руб
-                                </h5>
-                                <button class="bn-main">
-                                    <a href="#" class="bn-main-link">
-                                        В корзину 
-                                    </a>
-                                </button>
-                            </li>
-                            <li class="card-item">
-                                <img src="img/card/1.2.jpeg" id="fullscreenImage" alt="">
-                                <p class="card-after">
-                                    Макс Рихтер
-                                </p>
-                                <h3 class="card-title">
-                                    Птенцы
-                                </h3>
-                                <p class="card-text">
-                                    Холст, масло (50х80)  
-                                </p>
-                                <h5 class="buy">
-                                    14 500 руб
-                                </h5>
-                                <button class="bn-main">
-                                    <a href="#" class="bn-main-link">
-                                        В корзину 
-                                    </a>
-                                </button>
-                                <li class="card-item">
-                                    <img src="img/card/1.3.jpeg" id="fullscreenImage" alt="">
-                                    <p class="card-after">
-                                        Мартин Майер
-                                    </p>
-                                    <h3 class="card-title">
-                                        Среди листьев
-                                    </h3>
-                                    <p class="card-text">
-                                        Цветная литография (40х60) 
-                                    </p>
-                                    <h5 class="buy">
-                                        20 000 руб
-                                    </h5>
-                                    <button class="bn-main">
-                                        <a href="#" class="bn-main-link">
-                                            В корзину  
-                                        </a>
-                                    </button>
-                         </ul>
-                         <ul class="card-list">
-                            <li class="card-item">
-                                <img src="img/card/1.4.jpeg" id="fullscreenImage" alt="">
-                                <p class="card-after">
-                                    Герман Беккер
-                                </p>
-                                <h3 class="card-title">
-                                    Яркая птица
-                                </h3>
-                                <p class="card-text">
-                                    Цветная литография (40х60) 
-                                </p>
-                                <h5 class="buy">
-                                    13 000 руб
-                                </h5>
-                                <button class="bn-main">
-                                    <a href="#" class="bn-main-link">
-                                        В корзину 
-                                    </a>
-                                </button>
-                            </li>
-                            <li class="card-item">
-                                <img src="img/card/1.5.jpeg" id="fullscreenImage" alt="">
-                                <p class="card-after">
-                                    Вульф Бауэр
-                                </p>
-                                <h3 class="card-title">
-                                    Дятлы
-                                </h3>
-                                <p class="card-text">
-                                    Бумага, акрил (50х80) 
-                                </p>
-                                <h5 class="buy">
-                                    20 000 руб
-                                </h5>
-                                <button class="bn-main">
-                                    <a href="#" class="bn-main-link">
-                                        В корзину 
-                                    </a>
-                                </button>
-                                <li class="card-item">
-                                    <img src="img/card/1.6.jpeg" id="fullscreenImage" alt="">
-                                    <p class="card-after">
-                                        Вальтер Хартманн
-                                    </p>
-                                    <h3 class="card-title">
-                                        Большие воды
-                                    </h3>
-                                    <p class="card-text">
-                                        Бумага, акрил (50х80) 
-                                    </p>
-                                    <h5 class="buy">
-                                        23 000 руб
-                                    </h5>
-                                    <button class="bn-main">
-                                        <a href="#" class="bn-main-link">
-                                            В корзину  
-                                        </a>
-                                    </button>
-                         </ul> 
-                        </nav>
+									<li class="card-item">
+										<img src="img/card/3.jpeg" id="fullscreenImage" alt="" />
+										<p class="card-after">Франсуа Дюпон</p>
+										<h3 class="card-title">Процедура</h3>
+										<p class="card-text">Цветная литография (40х60)</p>
+										<h5 class="buy">20 000 руб</h5>
+										<button class="bn-main">
+											<a href="#" class="bn-main-link"> В корзину </a>
+										</button>
+									</li>
+								</ul>
 
-                        <nav id="england" class="block" style="display: none;">
-                            <ul class="card-list">
-                            <li class="card-item">
-                                <img src="img/card/2.1.jpeg" id="fullscreenImage" alt="">
-                                <p class="card-after">
-                                    Пол Смит
-                                </p>
-                                <h3 class="card-title">
-                                    Дикий зверь
-                                </h3>
-                                <p class="card-text">
-                                    Акварель, бумага (50х80)  
-                                </p>
-                                <h5 class="buy">
-                                    19 500 руб
-                                </h5>
-                                <button class="bn-main">
-                                    <a href="#" class="bn-main-link">
-                                        В корзину 
-                                    </a>
-                                </button>
-                            </li>
-                            <li class="card-item">
-                                <img src="img/card/2.2.jpeg" id="fullscreenImage" alt="">
-                                <p class="card-after">
-                                    Джон Уайт
-                                </p>
-                                <h3 class="card-title">
-                                    Скалистый берег
-                                </h3>
-                                <p class="card-text">
-                                    Цветная литография (40х60) 
-                                </p>
-                                <h5 class="buy">
-                                    17 500 руб
-                                </h5>
-                                <button class="bn-main">
-                                    <a href="#" class="bn-main-link">
-                                        В корзину 
-                                    </a>
-                                </button>
-                                <li class="card-item">
-                                    <img src="img/card/2.3.jpeg" id="fullscreenImage" alt="">
-                                    <p class="card-after">
-                                        Джим Уотсон
-                                    </p>
-                                    <h3 class="card-title">
-                                        Река и горы
-                                    </h3>
-                                    <p class="card-text">
-                                        Акварель, бумага (50х80) 
-                                    </p>
-                                    <h5 class="buy">
-                                        20 500 руб
-                                    </h5>
-                                    <button class="bn-main">
-                                        <a href="#" class="bn-main-link">
-                                            В корзину  
-                                        </a>
-                                    </button>
-                         </ul>
-                         <ul class="card-list">
-                            <li class="card-item">
-                                <img src="img/card/2.4.jpeg" id="fullscreenImage" alt="">
-                                <p class="card-after">
-                                    Юджин Зиллион
-                                </p>
-                                <h3 class="card-title">
-                                    Белый попугай
-                                </h3>
-                                <p class="card-text">
-                                    Цветная литография (40х60) 
-                                </p>
-                                <h5 class="buy">
-                                    15 500 руб
-                                </h5>
-                                <button class="bn-main">
-                                    <a href="#" class="bn-main-link">
-                                        В корзину 
-                                    </a>
-                                </button>
-                            </li>
-                            <li class="card-item">
-                                <img src="img/card/2.5.jpeg" id="fullscreenImage" alt="">
-                                <p class="card-after">
-                                    Эрик Гиллман
-                                </p>
-                                <h3 class="card-title">
-                                    Ночная рыба
-                                </h3>
-                                <p class="card-text">
-                                    Бумага, акрил (50х80)  
-                                </p>
-                                <h5 class="buy">
-                                    12 500 руб
-                                </h5>
-                                <button class="bn-main">
-                                    <a href="#" class="bn-main-link">
-                                        В корзину 
-                                    </a>
-                                </button>
-                                <li class="card-item">
-                                    <img src="img/card/2.6.jpeg" id="fullscreenImage" alt="">
-                                    <p class="card-after">
-                                        Альфред Барр
-                                    </p>
-                                    <h3 class="card-title">
-                                        Рыжий кот
-                                    </h3>
-                                    <p class="card-text">
-                                        Цветная литография (40х60) 
-                                    </p>
-                                    <h5 class="buy">
-                                        21 000 руб
-                                    </h5>
-                                    <button class="bn-main">
-                                        <a href="#" class="bn-main-link">
-                                            В корзину  
-                                        </a>
-                                    </button>
-                         </ul> 
-                        </nav>
-                        
+								<ul class="card-list">
+									<li class="card-item">
+										<img src="img/card/4.jpeg" id="fullscreenImage" alt="" />
+										<p class="card-after">Луи Детуш</p>
+										<h3 class="card-title">Роза</h3>
+										<p class="card-text">Бумага, акрил (50х80)</p>
+										<h5 class="buy">12 000 руб</h5>
+										<button class="bn-main">
+											<a href="#" class="bn-main-link"> В корзину </a>
+										</button>
+									</li>
+									<li class="card-item">
+										<img src="img/card/5.jpeg" id="fullscreenImage" alt="" />
+										<p class="card-after">Франсуа Дюпон</p>
+										<h3 class="card-title">Птичья трапеза</h3>
+										<p class="card-text">Цветная литография (40х60)</p>
+										<h5 class="buy">22 500 руб</h5>
+										<button class="bn-main">
+											<a href="#" class="bn-main-link"> В корзину </a>
+										</button>
+									</li>
 
-                </div>
-            </div>
-        </section>
-        <section id="news" class="page-collection" style="background-image:url(../House/img/bgfon/pic_background.jpeg) ;">
-            <div class="container">
-                <div class="page-collection-content">
-                    <div class="collection-title-block">
-                        <img src="img/logo/1.svg" alt="">
-                        <h2 class="collection-title">
-                            Новая коллекция французских авторов
-                        </h2>
-                    </div>
-                    <p class="collection-text">
-                        Сложно сказать, почему акционеры крупнейших компаний призывают нас к новым свершениям, которые, в свою очередь, должны быть заблокированы в рамках своих собственных рациональных ограничений.<br><br> 
-                        Принимая во внимание показатели успешности, граница обучения кадров предопределяет высокую востребованность направлений прогрессивного развития.
-                    </p>
-                    <button class="bn-collection"  onclick="toggleDocument()">
-                        <a href="#" class="bn-collection-link">
-                            Ознакомиться
-                        </a>
-                    </button>
-                </div>
-            </div>
-        </section>
-        <section id="team" class="page-team">
-            <div class="container">
-                <div class="page-team-content">
-                    <div class="page-team-lift">
-                        <img src="img/main/2.png" alt="">
-                    </div>
-                    <div class="page-team-right">
-                        <h2 class="team-title">
-                            Наша команда
-                        </h2>
-                        <p class="team-text">
-                            Значимость этих проблем настолько очевидна, что базовый вектор развития позволяет оценить значение экспериментов, поражающих по своей масштабности и грандиозности. Мы вынуждены отталкиваться от того, что консультация с широким активом.
-                        </p>
-                        <div class="team-img-block">
-                            <img src="img/main/1(1).png" alt="">
-                            <img src="img/main/2(2).png" alt="">
-                            <img src="img/main/3(3).png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="tel-block">
-                    <a href="#" class="logo-footer-content">
-                     <img src="img/logo/logo.svg" alt="">
-                        <p class="logo-title">
-                        Ink. House
-                        </p> 
-                    </a>
-                    <a class="tel-link" href="tel/+7 (999) 543-54-54" class="tel">
-                        +7 (999) 543-54-54
-                    </a>
-                    <p class="tel-name">
-                        Мастерская
-                    </p>
-                </div>
-                <nav class="footer-menu">
-                    <ul class="footer-menu-list">
-                        <li class="footer-menu-item">
-                            <a href="#reproductions" class="footer-menu-link_activ">
-                                Репродукции
-                            </a>
-                        </li>
-                        <li class="footer-menu-item">
-                            <a href="#france" class="footer-menu-link" onclick="toggleBlock('france')">
-                                Франция
-                            </a>
-                        </li>
-                        <li class="footer-menu-item">
-                            <a href="#germay" class="footer-menu-link" onclick="toggleBlock('germay')">
-                                Германия
-                            </a>
-                        </li>
-                        <li class="footer-menu-item">
-                            <a href="#england" class="footer-menu-link" onclick="toggleBlock('england')">
-                                Ангилия
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="footer-menu-list">
-                        <li class="footer-menu-item">
-                            <a href="#news" class="footer-menu-link_activ">
-                                Новинки
-                            </a>
-                        </li>
-                        <li class="footer-menu-item">
-                            <a href="#" class="footer-menu-link">
-                                2021
-                            </a>
-                        </li>
-                        <li class="footer-menu-item">
-                            <a href="#" class="footer-menu-link">
-                                2020
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="footer-menu-list">
-                        <li class="footer-menu-item">
-                            <a href="#team" class="footer-menu-link_activ">
-                                О нас
-                            </a>
-                        </li>
-                        <li class="footer-menu-item">
-                            <a href="#" class="footer-menu-link">
-                                Художники
-                            </a>
-                        </li>
-                        <li class="footer-menu-item">
-                            <a href="#" class="footer-menu-link">
-                                Менеджеры
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="social-block">
-                    <ul class="social-list">
-                        <li class="social-item">
-                            <a href="#" class="social-link">
-                                <img src="img/social/1.svg" alt="">
-                            </a>
-                        </li>
-                        <li class="social-item">
-                            <a href="#" class="social-link">
-                                <img src="img/social/2.svg" alt="">
-                            </a>
-                        </li>
-                        <li class="social-item">
-                            <a href="#" class="social-link">
-                                <img src="img/social/3.svg" alt="">
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="social-title">
-                        Ink. House ®
-                    </p>
-                    <p class="social-text">
-                        All rights reserved
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-</div>
-</body>
+									<li class="card-item">
+										<img src="img/card/6.jpeg" id="fullscreenImage" alt="" />
+										<p class="card-after">Пьер Моранж</p>
+										<h3 class="card-title">Пейзаж с рыбой</h3>
+										<p class="card-text">Цветная литография (40х60)</p>
+										<h5 class="buy">20 000 руб</h5>
+										<button class="bn-main">
+											<a href="#" class="bn-main-link"> В корзину </a>
+										</button>
+									</li>
+								</ul>
+							</nav>
+
+							<nav id="germay" class="block" style="display: none">
+								<ul class="card-list">
+									<li class="card-item">
+										<img src="img/card/1.1.jpeg" id="fullscreenImage" alt="" />
+										<p class="card-after">Курт Вернер</p>
+										<h3 class="card-title">Над городом</h3>
+										<p class="card-text">Цветная литография (40х60)</p>
+										<h5 class="buy">16 000 руб</h5>
+										<button class="bn-main">
+											<a href="#" class="bn-main-link"> В корзину </a>
+										</button>
+									</li>
+									<li class="card-item">
+										<img src="img/card/1.2.jpeg" id="fullscreenImage" alt="" />
+										<p class="card-after">Макс Рихтер</p>
+										<h3 class="card-title">Птенцы</h3>
+										<p class="card-text">Холст, масло (50х80)</p>
+										<h5 class="buy">14 500 руб</h5>
+										<button class="bn-main">
+											<a href="#" class="bn-main-link"> В корзину </a>
+										</button>
+									</li>
+
+									<li class="card-item">
+										<img src="img/card/1.3.jpeg" id="fullscreenImage" alt="" />
+										<p class="card-after">Мартин Майер</p>
+										<h3 class="card-title">Среди листьев</h3>
+										<p class="card-text">Цветная литография (40х60)</p>
+										<h5 class="buy">20 000 руб</h5>
+										<button class="bn-main">
+											<a href="#" class="bn-main-link"> В корзину </a>
+										</button>
+									</li>
+								</ul>
+
+								<ul class="card-list">
+									<li class="card-item">
+										<img src="img/card/1.4.jpeg" id="fullscreenImage" alt="" />
+										<p class="card-after">Герман Беккер</p>
+										<h3 class="card-title">Яркая птица</h3>
+										<p class="card-text">Цветная литография (40х60)</p>
+										<h5 class="buy">13 000 руб</h5>
+										<button class="bn-main">
+											<a href="#" class="bn-main-link"> В корзину </a>
+										</button>
+									</li>
+									<li class="card-item">
+										<img src="img/card/1.5.jpeg" id="fullscreenImage" alt="" />
+										<p class="card-after">Вульф Бауэр</p>
+										<h3 class="card-title">Дятлы</h3>
+										<p class="card-text">Бумага, акрил (50х80)</p>
+										<h5 class="buy">20 000 руб</h5>
+										<button class="bn-main">
+											<a href="#" class="bn-main-link"> В корзину </a>
+										</button>
+									</li>
+
+									<li class="card-item">
+										<img src="img/card/1.6.jpeg" id="fullscreenImage" alt="" />
+										<p class="card-after">Вальтер Хартманн</p>
+										<h3 class="card-title">Большие воды</h3>
+										<p class="card-text">Бумага, акрил (50х80)</p>
+										<h5 class="buy">23 000 руб</h5>
+										<button class="bn-main">
+											<a href="#" class="bn-main-link"> В корзину </a>
+										</button>
+									</li>
+								</ul>
+							</nav>
+
+							<nav id="england" class="block" style="display: none">
+								<ul class="card-list">
+									<li class="card-item">
+										<img src="img/card/2.1.jpeg" id="fullscreenImage" alt="" />
+										<p class="card-after">Пол Смит</p>
+										<h3 class="card-title">Дикий зверь</h3>
+										<p class="card-text">Акварель, бумага (50х80)</p>
+										<h5 class="buy">19 500 руб</h5>
+										<button class="bn-main">
+											<a href="#" class="bn-main-link"> В корзину </a>
+										</button>
+									</li>
+									<li class="card-item">
+										<img src="img/card/2.2.jpeg" id="fullscreenImage" alt="" />
+										<p class="card-after">Джон Уайт</p>
+										<h3 class="card-title">Скалистый берег</h3>
+										<p class="card-text">Цветная литография (40х60)</p>
+										<h5 class="buy">17 500 руб</h5>
+										<button class="bn-main">
+											<a href="#" class="bn-main-link"> В корзину </a>
+										</button>
+									</li>
+
+									<li class="card-item">
+										<img src="img/card/2.3.jpeg" id="fullscreenImage" alt="" />
+										<p class="card-after">Джим Уотсон</p>
+										<h3 class="card-title">Река и горы</h3>
+										<p class="card-text">Акварель, бумага (50х80)</p>
+										<h5 class="buy">20 500 руб</h5>
+										<button class="bn-main">
+											<a href="#" class="bn-main-link"> В корзину </a>
+										</button>
+									</li>
+								</ul>
+
+								<ul class="card-list">
+									<li class="card-item">
+										<img src="img/card/2.4.jpeg" id="fullscreenImage" alt="" />
+										<p class="card-after">Юджин Зиллион</p>
+										<h3 class="card-title">Белый попугай</h3>
+										<p class="card-text">Цветная литография (40х60)</p>
+										<h5 class="buy">15 500 руб</h5>
+										<button class="bn-main">
+											<a href="#" class="bn-main-link"> В корзину </a>
+										</button>
+									</li>
+									<li class="card-item">
+										<img src="img/card/2.5.jpeg" id="fullscreenImage" alt="" />
+										<p class="card-after">Эрик Гиллман</p>
+										<h3 class="card-title">Ночная рыба</h3>
+										<p class="card-text">Бумага, акрил (50х80)</p>
+										<h5 class="buy">12 500 руб</h5>
+										<button class="bn-main">
+											<a href="#" class="bn-main-link"> В корзину </a>
+										</button>
+									</li>
+
+									<li class="card-item">
+										<img src="img/card/2.6.jpeg" id="fullscreenImage" alt="" />
+										<p class="card-after">Альфред Барр</p>
+										<h3 class="card-title">Рыжий кот</h3>
+										<p class="card-text">Цветная литография (40х60)</p>
+										<h5 class="buy">21 000 руб</h5>
+										<button class="bn-main">
+											<a href="#" class="bn-main-link"> В корзину </a>
+										</button>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</section>
+				<section id="news" class="page-collection" style="background-image: url(./img/bgfon/pic_background.jpeg)">
+					<div class="container">
+						<div class="page-collection-content">
+							<div class="collection-title-block">
+								<img src="img/logo/1.svg" alt="" />
+								<h2 class="collection-title">Новая коллекция французских авторов</h2>
+							</div>
+							<p class="collection-text">
+								Сложно сказать, почему акционеры крупнейших компаний призывают нас к новым свершениям, которые, в свою
+								очередь, должны быть заблокированы в рамках своих собственных рациональных ограничений.<br /><br />
+								Принимая во внимание показатели успешности, граница обучения кадров предопределяет высокую
+								востребованность направлений прогрессивного развития.
+							</p>
+							<button class="bn-collection" onclick="toggleDocument()">
+								<a href="#" class="bn-collection-link"> Ознакомиться </a>
+							</button>
+						</div>
+					</div>
+				</section>
+				<section id="team" class="page-team">
+					<div class="container">
+						<div class="page-team-content">
+							<div class="page-team-lift">
+								<img src="img/main/2.png" alt="" />
+							</div>
+							<div class="page-team-right">
+								<h2 class="team-title">Наша команда</h2>
+								<p class="team-text">
+									Значимость этих проблем настолько очевидна, что базовый вектор развития позволяет оценить значение
+									экспериментов, поражающих по своей масштабности и грандиозности. Мы вынуждены отталкиваться от того,
+									что консультация с широким активом.
+								</p>
+								<div class="team-img-block">
+									<img src="img/main/1(1).png" alt="" />
+									<img src="img/main/2(2).png" alt="" />
+									<img src="img/main/3(3).png" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="container">
+					<div class="footer-content">
+						<div class="tel-block">
+							<a href="#" class="logo-footer-content">
+								<img src="img/logo/logo.svg" alt="" />
+								<p class="logo-title">Ink. House</p>
+							</a>
+							<a class="tel-link" href="tel/+7 (999) 543-54-54" class="tel"> +7 (999) 543-54-54 </a>
+							<p class="tel-name">Мастерская</p>
+						</div>
+						<nav class="footer-menu">
+							<ul class="footer-menu-list">
+								<li class="footer-menu-item">
+									<a href="#reproductions" class="footer-menu-link_activ"> Репродукции </a>
+								</li>
+								<li class="footer-menu-item">
+									<a href="#france" class="footer-menu-link" onclick="toggleBlock('france')"> Франция </a>
+								</li>
+								<li class="footer-menu-item">
+									<a href="#germay" class="footer-menu-link" onclick="toggleBlock('germay')"> Германия </a>
+								</li>
+								<li class="footer-menu-item">
+									<a href="#england" class="footer-menu-link" onclick="toggleBlock('england')"> Ангилия </a>
+								</li>
+							</ul>
+							<ul class="footer-menu-list">
+								<li class="footer-menu-item">
+									<a href="#news" class="footer-menu-link_activ"> Новинки </a>
+								</li>
+								<li class="footer-menu-item">
+									<a href="#" class="footer-menu-link"> 2021 </a>
+								</li>
+								<li class="footer-menu-item">
+									<a href="#" class="footer-menu-link"> 2020 </a>
+								</li>
+							</ul>
+							<ul class="footer-menu-list">
+								<li class="footer-menu-item">
+									<a href="#team" class="footer-menu-link_activ"> О нас </a>
+								</li>
+								<li class="footer-menu-item">
+									<a href="#" class="footer-menu-link"> Художники </a>
+								</li>
+								<li class="footer-menu-item">
+									<a href="#" class="footer-menu-link"> Менеджеры </a>
+								</li>
+							</ul>
+						</nav>
+						<div class="social-block">
+							<ul class="social-list">
+								<li class="social-item">
+									<a href="#" class="social-link">
+										<img src="img/social/1.svg" alt="" />
+									</a>
+								</li>
+								<li class="social-item">
+									<a href="#" class="social-link">
+										<img src="img/social/2.svg" alt="" />
+									</a>
+								</li>
+								<li class="social-item">
+									<a href="#" class="social-link">
+										<img src="img/social/3.svg" alt="" />
+									</a>
+								</li>
+							</ul>
+							<p class="social-title">Ink. House ®</p>
+							<p class="social-text">All rights reserved</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
 </html>
