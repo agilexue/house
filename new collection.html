@@ -1,348 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Стиль -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/new collection.css/style.css">
-    <link rel="stylesheet" href="css/new collection.css/media.css">
-    <!-- Шрифты -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
-    <!-- JS -->
-    <script defer src="js/main.js"></script>
-    <script defer src="js/new collection.js"></script>
-    <!-- Иконка -->
-    <link rel="icon" href="img/logo/logo.svg">
-    <!-- Название-->
-    <title>New collection</title>
-</head>
-<body>
-    <div class="autolayout">
-        <header id="header" class="header" class="header_scroll">
-            <div class="container">
-                <div class="header-content">
-                    <a href="#index.html" class="logo-content" onClick="refreshPage()">
-                        <img src="img/logo/logo.svg" alt="">
-                            <p class="logo-title">
-                                Ink. House
-                            </p> 
-                    </a>
-                    <button class="header-burger">
-                        <span></span><span></span><span></span>
-                    </button>
-                    <nav class="menu">
-                        <ul class="menu-list">
-                            <li class="menu-item">
-                                <a href="#info" class="menu-link">
-                                    Репродукции
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#news" class="menu-link">
-                                    Новинки
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#team" class="menu-link">
-                                    О нас
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#" class="menu-link">
-                                    <img src="img/icon/buy.png" alt="">
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-        <main class="main">
-            <section id="news" class="page-collection" style="background-image: url(../House/img/bgfon/pic_background.jpeg);">
-                <div class="container">
-                    <div class="page-collection-content">
-                        <div class="collection-title-block">
-                            <img id="fullscreenImage" src="img/logo/1.svg" alt="">
-                            <h2 class="collection-title">
-                                Новая коллекция французских авторов
-                            </h2>
-                        </div>
-                        <p class="collection-text">
-                            Сложно сказать, почему акционеры крупнейших компаний призывают нас к новым свершениям, которые, в свою очередь, должны быть заблокированы в рамках своих собственных рациональных ограничений.<br><br> 
-                            Принимая во внимание показатели успешности, граница обучения кадров предопределяет высокую востребованность направлений прогрессивного развития.
-                        </p>
-                        <button class="bn-collection" id="toggleButton">
-                            <a href="#" class="bn-collection-link">
-                                Перейти на главную страницу
-                            </a>
-                        </button>
-                    </div>
-                </div>
-            </section>
-            <section id="info" class="page-info">
-                <div class="container">
-                    <p class="section-title">
-                        Новая коллекция французских авторов
-                    </p>
-                    <div class="page-info-content">
-                        <div class="page-info-left">
-                            <ul class="card-info-list">
-                                <li class="card-info-item">
-                                    <img class="card-img" src="img/paintings/1.jpg">
-                                    <p class="card-info-after">
-                                        Клод Моне (Claude Monet)
-                                    </p>
-                                    <h3 class="card-info-title">
-                                        Водные лилии
-                                    </h3>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="page-info-right">
-                            <h2 class="page-info-title">
-                                Водные лилии
-                            </h2>
-                            <p class="page-info-text">
-                                "Водные лилии" (Water Lilies) - это серия картин, созданных французским художником Клодом Моне (Claude Monet) в течение многих лет. Эти картины изображают пруд с водными лилиями в саду художника в Живерни, Франция. Моне был вдохновлен красотой природы и водных растений, и эта серия работ стала одной из самых известных и узнаваемых в его творчестве.
-                                На картинах "Водные лилии" Моне использовал свою характерную технику импрессионизма, которая характеризуется мягкими мазками кисти, яркими цветами и игрой света. Он погружает зрителя в мир водных лилий, отражающихся на поверхности воды, создавая атмосферу спокойствия и гармонии.
-                                Эти картины "Водные лилии" стали символом иконичного творчества Моне и его вклада в развитие искусства. Они продолжают восхищать зрителей своей красотой и влиянием на мир живописи.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="page-info-content">
-                        <div class="page-info-left">
-                            <h2 class="page-info-title">
-                                Завтрак на траве
-                            </h2>
-                            <p class="page-info-text">
-                                "Завтрак на траве" (Le Déjeuner sur l'herbe) - это одна из самых известных картин французского художника Эдуарда Мане (Édouard Manet), созданная в 1863 году. Картина вызвала скандал на Парижском салоне и стала одним из символов революции в искусстве и появления реализма и модернизма.
-                                На картине "Завтрак на траве" изображены два мужчины и две женщины, пикничающие на траве в парке. Одна из женщин полностью раздета, что в то время было неприемлемо и вызвало шок у зрителей. Сцена пикника в природе смешивает элементы реализма и символизма, создавая загадочную и провокационную атмосферу.
-                                Мане использовал яркие цвета, четкие контуры и освещение, чтобы подчеркнуть контраст между фигурами на переднем плане и окружающим ландшафтом. Картина "Завтрак на траве" стала одной из ключевых работ в истории искусства, открыв новые пути для художественного выражения и вызвав дискуссии о нравственности и искусстве.       
-                            </p>
-                        </div>
-                        <div class="page-info-right">
-                            <ul class="card-info-list">
-                                <li class="card-info-item">
-                                    <img class="card-img" src="img/paintings/2.jpg" alt="">
-                                    <p class="card-info-after">
-                                        Эдуард Мане (Édouard Manet)
-                                    </p>
-                                    <h3 class="card-info-title">
-                                        Завтрак на траве
-                                    </h3>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="page-info-content">
-                        <div class="page-info-left">
-                            <ul class="card-info-list">
-                                <li class="card-info-item">
-                                    <img class="card-img" src="img/paintings//3.jpg" alt="">
-                                    <p class="card-info-after">
-                                        Поль Сезанн (Paul Cézanne) 
-                                    </p>
-                                    <h3 class="card-info-title">
-                                        Гора Сент-Виктория
-                                    </h3>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="page-info-right">
-                            <h2 class="page-info-title">
-                                Гора Сент-Виктория
-                            </h2>
-                            <p class="page-info-text">
-                                "Гора Сент-Виктория" (Mont Sainte-Victoire) - это серия картин, созданных французским художником Поль Сезанном (Paul Cézanne) в разные периоды его творчества. Эта серия работ изображает гору Сент-Виктория, которая расположена недалеко от Акс-ан-Прованс во Франции и стала одним из ключевых мотивов в творчестве художника.
-                                На картинах "Гора Сент-Виктория" Сезанн использует свою характерную технику, характеризующуюся геометрическими формами, объемами и игрой света. Он изображает гору в различных ракурсах и условиях освещения, создавая множество интерпретаций одного и того же мотива.
-                                Сезанн стремился к передаче глубины и объема в своих работах, а также к передаче внутренней гармонии природы. Картины "Гора Сент-Виктория" стали символом его поисков в искусстве и влияния на развитие постимпрессионизма и кубизма.
-                                Эта серия работ является одной из наиболее значимых в творчестве Поля Сезанна и продолжает вдохновлять художников и ценителей искусства своей глубиной и красотой.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="page-info-content">
-                        <div class="page-info-left">
-                            <h2 class="page-info-title">
-                                Балерины
-                            </h2>
-                            <p class="page-info-text">
-                                "Балерины" - это серия картин, созданных французским художником Эдгаром Дега (Edgar Degas) в разные периоды его творчества. Эта серия работ изображает балерин и танцовщиц, часто во время репетиций или выступлений на сцене, и стала одной из самых известных и узнаваемых в его творчестве.
-                                На картинах "Балерины" ега показывает изящество и грацию танцовщиц, их движения, позы и эмоции. Он уделяет особое внимание деталям, позе и выражению лиц балерин, захватывая моменты их танцевального исполнения. Часто на его картинах можно увидеть танцовщиц в различных позах, в разных костюмах и с разными выражениями лица.
-                                Дега использовал различные техники, такие как масло, акварель, уголь, пастель, чтобы передать атмосферу театрального мира и танцевальной сцены. Его работы "Балерины" стали символом его уникального стиля и внимания к женской фигуре и движению.
-                                Эта серия работ "Балерины" Эдгара Дега олицетворяет его великолепное мастерство в изображении человеческого тела и движения, а также его вклад в развитие искусства и восприятие танца как искусства.
-                            </p>
-                        </div>
-                        <div class="page-info-right">
-                            <ul class="card-info-list">
-                                <li class="card-info-item">
-                                    <img class="card-img" src="img/paintings/4.jpg" alt="">
-                                    <p class="card-info-after">
-                                        Эдгар Дега (Edgar Degas)
-                                    </p>
-                                    <h3 class="card-info-title">
-                                        Балерины
-                                    </h3>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="page-info-content">
-                        <div class="page-info-left">
-                            <ul class="card-info-list">
-                                <li class="card-info-item">
-                                    <img class="card-img" src="img/paintings/5.jpg" alt="">
-                                    <p class="card-info-after">
-                                        Жан-Леон Жером (Jean-Léon Gérôme)
-                                    </p>
-                                    <h3 class="card-info-title">
-                                        Падение Рима
-                                    </h3>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="page-info-right">
-                            <h2 class="page-info-title">
-                                Падение Рима
-                            </h2>
-                            <p class="page-info-text">
-                                "Падение Рима" (The Fall of Rome) - это картина французского художника Жан-Леона Жерома (Jean-Léon Gérôme), созданная в 1887 году. Это историческая картина, изображающая момент падения Римской империи и разрушения древнего Рима.
-                                На картине "Падение Рима" Жером изобразил хаос и разрушение великого города: пламя, разрушенные здания, людей в панике. Сцена наполнена драматизмом и эмоциями, показывая конец эпохи и цивилизации
-                                Жером использовал свое мастерство в реализме и детализации, чтобы передать реалистичность исторического события. Он внимательно изучал античные источники и археологические находки, чтобы воссоздать атмосферу древнего Рима.                                
-                                "Падение Рима" стала одной из наиболее известных работ Жан-Леона Жерома и символизирует его талант в изображении исторических сцен с великим мастерством и драматизмом. Эта картина олицетворяет его вклад в историческую живопись и его внимание к деталям и аутентичности.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="team" class="page-team">
-                <div class="container">
-                    <div class="page-team-content">
-                        <div class="page-team-lift">
-                            <img src="img/main/2.png" alt="">
-                        </div>
-                        <div class="page-team-right">
-                            <h2 class="team-title">
-                                Наша команда
-                            </h2>
-                            <p class="team-text">
-                                Значимость этих проблем настолько очевидна, что базовый вектор развития позволяет оценить значение экспериментов, поражающих по своей масштабности и грандиозности. Мы вынуждены отталкиваться от того, что консультация с широким активом.
-                            </p>
-                            <div class="team-img-block">
-                                <img src="img/main/1(1).png" alt="">
-                                <img src="img/main/2(2).png" alt="">
-                                <img src="img/main/3(3).png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="tel-block">
-                        <a href="#" class="logo-footer-content">
-                         <img src="img/logo/logo.svg" alt="">
-                            <p class="logo-title">
-                            Ink. House
-                            </p> 
-                        </a>
-                        <a class="tel-link" href="tel/+7 (999) 543-54-54" class="tel">
-                            +7 (999) 543-54-54
-                        </a>
-                        <p class="tel-name">
-                            Мастерская
-                        </p>
-                    </div>
-                    <nav class="footer-menu">
-                        <ul class="footer-menu-list">
-                            <li class="footer-menu-item">
-                                <a href="#reproductions" class="footer-menu-link_activ">
-                                    Репродукции
-                                </a>
-                            </li>
-                            <li class="footer-menu-item">
-                                <a href="#france" class="footer-menu-link" onclick="toggleBlock('france')">
-                                    Франция
-                                </a>
-                            </li>
-                            <li class="footer-menu-item">
-                                <a href="#germay" class="footer-menu-link" onclick="toggleBlock('germay')">
-                                    Германия
-                                </a>
-                            </li>
-                            <li class="footer-menu-item">
-                                <a href="#england" class="footer-menu-link" onclick="toggleBlock('england')">
-                                    Ангилия
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="footer-menu-list">
-                            <li class="footer-menu-item">
-                                <a href="#news" class="footer-menu-link_activ">
-                                    Новинки
-                                </a>
-                            </li>
-                            <li class="footer-menu-item">
-                                <a href="#" class="footer-menu-link">
-                                    2021
-                                </a>
-                            </li>
-                            <li class="footer-menu-item">
-                                <a href="#" class="footer-menu-link">
-                                    2020
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="footer-menu-list">
-                            <li class="footer-menu-item">
-                                <a href="#team" class="footer-menu-link_activ">
-                                    О нас
-                                </a>
-                            </li>
-                            <li class="footer-menu-item">
-                                <a href="#" class="footer-menu-link">
-                                    Художники
-                                </a>
-                            </li>
-                            <li class="footer-menu-item">
-                                <a href="#" class="footer-menu-link">
-                                    Менеджеры
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="social-block">
-                        <ul class="social-list">
-                            <li class="social-item">
-                                <a href="#" class="social-link">
-                                    <img src="img/social/1.svg" alt="">
-                                </a>
-                            </li>
-                            <li class="social-item">
-                                <a href="#" class="social-link">
-                                    <img src="img/social/2.svg" alt="">
-                                </a>
-                            </li>
-                            <li class="social-item">
-                                <a href="#" class="social-link">
-                                    <img src="img/social/3.svg" alt="">
-                                </a>
-                            </li>
-                        </ul>
-                        <p class="social-title">
-                            Ink. House ®
-                        </p>
-                        <p class="social-text">
-                            All rights reserved
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Стиль -->
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/new collection.css/style.css" />
+		<link rel="stylesheet" href="css/new collection.css/media.css" />
+		<!-- Шрифты -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet" />
+		<!-- JS -->
+		<script defer src="js/main.js"></script>
+		<script defer src="js/new collection.js"></script>
+		<!-- Иконка -->
+		<link rel="icon" href="img/logo/logo.svg" />
+		<!-- Название-->
+		<title>New collection</title>
+	</head>
+	<body>
+		<div class="autolayout">
+			<header id="header" class="header" class="header_scroll">
+				<div class="container">
+					<div class="header-content">
+						<a href="#index.html" class="logo-content" onClick="refreshPage()">
+							<img src="img/logo/logo.svg" alt="" />
+							<p class="logo-title">Ink. House</p>
+						</a>
+						<button class="header-burger"><span></span><span></span><span></span></button>
+						<nav class="menu">
+							<ul class="menu-list">
+								<li class="menu-item">
+									<a href="#info" class="menu-link"> Репродукции </a>
+								</li>
+								<li class="menu-item">
+									<a href="#news" class="menu-link"> Новинки </a>
+								</li>
+								<li class="menu-item">
+									<a href="#team" class="menu-link"> О нас </a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link">
+										<img src="img/icon/buy.png" alt="" />
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+				<section id="news" class="page-collection" style="background-image: url(./img/bgfon/pic_background.jpeg)">
+					<div class="container">
+						<div class="page-collection-content">
+							<div class="collection-title-block">
+								<img id="fullscreenImage" src="img/logo/1.svg" alt="" />
+								<h2 class="collection-title">Новая коллекция французских авторов</h2>
+							</div>
+							<p class="collection-text">
+								Сложно сказать, почему акционеры крупнейших компаний призывают нас к новым свершениям, которые, в свою
+								очередь, должны быть заблокированы в рамках своих собственных рациональных ограничений.<br /><br />
+								Принимая во внимание показатели успешности, граница обучения кадров предопределяет высокую
+								востребованность направлений прогрессивного развития.
+							</p>
+							<button class="bn-collection" id="toggleButton">
+								<a href="#" class="bn-collection-link"> Перейти на главную страницу </a>
+							</button>
+						</div>
+					</div>
+				</section>
+				<section id="info" class="page-info">
+					<div class="container">
+						<p class="section-title">Новая коллекция французских авторов</p>
+						<div class="page-info-content">
+							<div class="page-info-left">
+								<ul class="card-info-list">
+									<li class="card-info-item">
+										<img class="card-img" src="img/paintings/1.jpg" />
+										<p class="card-info-after">Клод Моне (Claude Monet)</p>
+										<h3 class="card-info-title">Водные лилии</h3>
+									</li>
+								</ul>
+							</div>
+							<div class="page-info-right">
+								<h2 class="page-info-title">Водные лилии</h2>
+								<p class="page-info-text">
+									"Водные лилии" (Water Lilies) - это серия картин, созданных французским художником Клодом Моне (Claude
+									Monet) в течение многих лет. Эти картины изображают пруд с водными лилиями в саду художника в Живерни,
+									Франция. Моне был вдохновлен красотой природы и водных растений, и эта серия работ стала одной из
+									самых известных и узнаваемых в его творчестве. На картинах "Водные лилии" Моне использовал свою
+									характерную технику импрессионизма, которая характеризуется мягкими мазками кисти, яркими цветами и
+									игрой света. Он погружает зрителя в мир водных лилий, отражающихся на поверхности воды, создавая
+									атмосферу спокойствия и гармонии. Эти картины "Водные лилии" стали символом иконичного творчества Моне
+									и его вклада в развитие искусства. Они продолжают восхищать зрителей своей красотой и влиянием на мир
+									живописи.
+								</p>
+							</div>
+						</div>
+						<div class="page-info-content">
+							<div class="page-info-left">
+								<h2 class="page-info-title">Завтрак на траве</h2>
+								<p class="page-info-text">
+									"Завтрак на траве" (Le Déjeuner sur l'herbe) - это одна из самых известных картин французского
+									художника Эдуарда Мане (Édouard Manet), созданная в 1863 году. Картина вызвала скандал на Парижском
+									салоне и стала одним из символов революции в искусстве и появления реализма и модернизма. На картине
+									"Завтрак на траве" изображены два мужчины и две женщины, пикничающие на траве в парке. Одна из женщин
+									полностью раздета, что в то время было неприемлемо и вызвало шок у зрителей. Сцена пикника в природе
+									смешивает элементы реализма и символизма, создавая загадочную и провокационную атмосферу. Мане
+									использовал яркие цвета, четкие контуры и освещение, чтобы подчеркнуть контраст между фигурами на
+									переднем плане и окружающим ландшафтом. Картина "Завтрак на траве" стала одной из ключевых работ в
+									истории искусства, открыв новые пути для художественного выражения и вызвав дискуссии о нравственности
+									и искусстве.
+								</p>
+							</div>
+							<div class="page-info-right">
+								<ul class="card-info-list">
+									<li class="card-info-item">
+										<img class="card-img" src="img/paintings/2.jpg" alt="" />
+										<p class="card-info-after">Эдуард Мане (Édouard Manet)</p>
+										<h3 class="card-info-title">Завтрак на траве</h3>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="page-info-content">
+							<div class="page-info-left">
+								<ul class="card-info-list">
+									<li class="card-info-item">
+										<img class="card-img" src="img/paintings//3.jpg" alt="" />
+										<p class="card-info-after">Поль Сезанн (Paul Cézanne)</p>
+										<h3 class="card-info-title">Гора Сент-Виктория</h3>
+									</li>
+								</ul>
+							</div>
+							<div class="page-info-right">
+								<h2 class="page-info-title">Гора Сент-Виктория</h2>
+								<p class="page-info-text">
+									"Гора Сент-Виктория" (Mont Sainte-Victoire) - это серия картин, созданных французским художником Поль
+									Сезанном (Paul Cézanne) в разные периоды его творчества. Эта серия работ изображает гору
+									Сент-Виктория, которая расположена недалеко от Акс-ан-Прованс во Франции и стала одним из ключевых
+									мотивов в творчестве художника. На картинах "Гора Сент-Виктория" Сезанн использует свою характерную
+									технику, характеризующуюся геометрическими формами, объемами и игрой света. Он изображает гору в
+									различных ракурсах и условиях освещения, создавая множество интерпретаций одного и того же мотива.
+									Сезанн стремился к передаче глубины и объема в своих работах, а также к передаче внутренней гармонии
+									природы. Картины "Гора Сент-Виктория" стали символом его поисков в искусстве и влияния на развитие
+									постимпрессионизма и кубизма. Эта серия работ является одной из наиболее значимых в творчестве Поля
+									Сезанна и продолжает вдохновлять художников и ценителей искусства своей глубиной и красотой.
+								</p>
+							</div>
+						</div>
+						<div class="page-info-content">
+							<div class="page-info-left">
+								<h2 class="page-info-title">Балерины</h2>
+								<p class="page-info-text">
+									"Балерины" - это серия картин, созданных французским художником Эдгаром Дега (Edgar Degas) в разные
+									периоды его творчества. Эта серия работ изображает балерин и танцовщиц, часто во время репетиций или
+									выступлений на сцене, и стала одной из самых известных и узнаваемых в его творчестве. На картинах
+									"Балерины" ега показывает изящество и грацию танцовщиц, их движения, позы и эмоции. Он уделяет особое
+									внимание деталям, позе и выражению лиц балерин, захватывая моменты их танцевального исполнения. Часто
+									на его картинах можно увидеть танцовщиц в различных позах, в разных костюмах и с разными выражениями
+									лица. Дега использовал различные техники, такие как масло, акварель, уголь, пастель, чтобы передать
+									атмосферу театрального мира и танцевальной сцены. Его работы "Балерины" стали символом его уникального
+									стиля и внимания к женской фигуре и движению. Эта серия работ "Балерины" Эдгара Дега олицетворяет его
+									великолепное мастерство в изображении человеческого тела и движения, а также его вклад в развитие
+									искусства и восприятие танца как искусства.
+								</p>
+							</div>
+							<div class="page-info-right">
+								<ul class="card-info-list">
+									<li class="card-info-item">
+										<img class="card-img" src="img/paintings/4.jpg" alt="" />
+										<p class="card-info-after">Эдгар Дега (Edgar Degas)</p>
+										<h3 class="card-info-title">Балерины</h3>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="page-info-content">
+							<div class="page-info-left">
+								<ul class="card-info-list">
+									<li class="card-info-item">
+										<img class="card-img" src="img/paintings/5.jpg" alt="" />
+										<p class="card-info-after">Жан-Леон Жером (Jean-Léon Gérôme)</p>
+										<h3 class="card-info-title">Падение Рима</h3>
+									</li>
+								</ul>
+							</div>
+							<div class="page-info-right">
+								<h2 class="page-info-title">Падение Рима</h2>
+								<p class="page-info-text">
+									"Падение Рима" (The Fall of Rome) - это картина французского художника Жан-Леона Жерома (Jean-Léon
+									Gérôme), созданная в 1887 году. Это историческая картина, изображающая момент падения Римской империи
+									и разрушения древнего Рима. На картине "Падение Рима" Жером изобразил хаос и разрушение великого
+									города: пламя, разрушенные здания, людей в панике. Сцена наполнена драматизмом и эмоциями, показывая
+									конец эпохи и цивилизации Жером использовал свое мастерство в реализме и детализации, чтобы передать
+									реалистичность исторического события. Он внимательно изучал античные источники и археологические
+									находки, чтобы воссоздать атмосферу древнего Рима. "Падение Рима" стала одной из наиболее известных
+									работ Жан-Леона Жерома и символизирует его талант в изображении исторических сцен с великим
+									мастерством и драматизмом. Эта картина олицетворяет его вклад в историческую живопись и его внимание к
+									деталям и аутентичности.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="team" class="page-team">
+					<div class="container">
+						<div class="page-team-content">
+							<div class="page-team-lift">
+								<img src="img/main/2.png" alt="" />
+							</div>
+							<div class="page-team-right">
+								<h2 class="team-title">Наша команда</h2>
+								<p class="team-text">
+									Значимость этих проблем настолько очевидна, что базовый вектор развития позволяет оценить значение
+									экспериментов, поражающих по своей масштабности и грандиозности. Мы вынуждены отталкиваться от того,
+									что консультация с широким активом.
+								</p>
+								<div class="team-img-block">
+									<img src="img/main/1(1).png" alt="" />
+									<img src="img/main/2(2).png" alt="" />
+									<img src="img/main/3(3).png" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="container">
+					<div class="footer-content">
+						<div class="tel-block">
+							<a href="#" class="logo-footer-content">
+								<img src="img/logo/logo.svg" alt="" />
+								<p class="logo-title">Ink. House</p>
+							</a>
+							<a class="tel-link" href="tel/+7 (999) 543-54-54" class="tel"> +7 (999) 543-54-54 </a>
+							<p class="tel-name">Мастерская</p>
+						</div>
+						<nav class="footer-menu">
+							<ul class="footer-menu-list">
+								<li class="footer-menu-item">
+									<a href="#reproductions" class="footer-menu-link_activ"> Репродукции </a>
+								</li>
+								<li class="footer-menu-item">
+									<a href="#france" class="footer-menu-link" onclick="toggleBlock('france')"> Франция </a>
+								</li>
+								<li class="footer-menu-item">
+									<a href="#germay" class="footer-menu-link" onclick="toggleBlock('germay')"> Германия </a>
+								</li>
+								<li class="footer-menu-item">
+									<a href="#england" class="footer-menu-link" onclick="toggleBlock('england')"> Ангилия </a>
+								</li>
+							</ul>
+							<ul class="footer-menu-list">
+								<li class="footer-menu-item">
+									<a href="#news" class="footer-menu-link_activ"> Новинки </a>
+								</li>
+								<li class="footer-menu-item">
+									<a href="#" class="footer-menu-link"> 2021 </a>
+								</li>
+								<li class="footer-menu-item">
+									<a href="#" class="footer-menu-link"> 2020 </a>
+								</li>
+							</ul>
+							<ul class="footer-menu-list">
+								<li class="footer-menu-item">
+									<a href="#team" class="footer-menu-link_activ"> О нас </a>
+								</li>
+								<li class="footer-menu-item">
+									<a href="#" class="footer-menu-link"> Художники </a>
+								</li>
+								<li class="footer-menu-item">
+									<a href="#" class="footer-menu-link"> Менеджеры </a>
+								</li>
+							</ul>
+						</nav>
+						<div class="social-block">
+							<ul class="social-list">
+								<li class="social-item">
+									<a href="#" class="social-link">
+										<img src="img/social/1.svg" alt="" />
+									</a>
+								</li>
+								<li class="social-item">
+									<a href="#" class="social-link">
+										<img src="img/social/2.svg" alt="" />
+									</a>
+								</li>
+								<li class="social-item">
+									<a href="#" class="social-link">
+										<img src="img/social/3.svg" alt="" />
+									</a>
+								</li>
+							</ul>
+							<p class="social-title">Ink. House ®</p>
+							<p class="social-text">All rights reserved</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
 </html>
