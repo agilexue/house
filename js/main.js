@@ -28,17 +28,16 @@ function toggleBlock(blockId) {
   }
 
 //Переход на новую страницу
-let clicked = false;
+let newWindow = null;
 
-function toggleDocument() {
-  if (!clicked) {
-    window.location.href = 'new collection.html';
-    clicked = true;
-  } else {
-    window.location.href = 'index.html';
-    clicked = false;
-  }
+document.getElementById('toggleButton').addEventListener('click', function() {
+if (newWindow && !newWindow.closed) {
+newWindow.close();
+newWindow = null;
+} else {
+newWindow = window.open('new collection.html');
 }
+});
 
 // Модальное окно
 const modal = document.getElementById('modal');
@@ -103,4 +102,13 @@ fullscreenImage.addEventListener('click', function() {
   } else if (fullscreenImage.msRequestFullscreen) { 
     fullscreenImage.msRequestFullscreen();
   }
+  
 });
+
+
+
+
+
+
+
+
